@@ -6,6 +6,7 @@ import {isLoaded, load as loadWidgets} from 'redux/modules/widgets';
 import {initializeWithKey} from 'redux-form';
 import { WidgetForm } from 'components';
 import { asyncConnect } from 'redux-async-connect';
+import { browserHistory } from 'react-router';
 
 @asyncConnect([{
   deferred: true,
@@ -99,6 +100,7 @@ export default class Widgets extends Component {
           }
           </tbody>
         </table>}
+        <button className="btn btn-danger" onClick={browserHistory.goBack}>BACK TO HOME PAGE</button>
       </div>
     );
   }

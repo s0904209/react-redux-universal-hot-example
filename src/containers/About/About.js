@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { browserHistory } from 'react-router';
 import Helmet from 'react-helmet';
 import { MiniInfoBar } from 'components';
 
@@ -44,6 +45,7 @@ export default class About extends Component {
         </p>
 
         {showKitten && <div><img src={kitten}/></div>}
+        <button className="btn btn-success" onClick={browserHistory.goBack}>BACK TO HOME PAGE</button>
       </div>
     );
   }
